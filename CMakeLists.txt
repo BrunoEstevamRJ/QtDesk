@@ -20,7 +20,7 @@ add_executable(QtDesk
 
     src/ui/MainWindow.h
     src/ui/MainWindow.cpp
-    src/ui/MainWindow.ui
+    #    src/ui/MainWindow.ui
 
     src/core/Task.h
     src/core/TaskService.h
