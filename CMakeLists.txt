@@ -20,7 +20,6 @@ add_executable(QtDesk
 
     src/ui/MainWindow.h
     src/ui/MainWindow.cpp
-    #    src/ui/MainWindow.ui
 
     src/core/Task.h
     src/core/TaskService.h
@@ -34,6 +33,7 @@ add_executable(QtDesk
     src/net/QuoteClient.h
     src/net/QuoteClient.cpp
 )
+
 
 target_include_directories(QtDesk PRIVATE src)
 
@@ -50,5 +50,5 @@ endif()
 
 #>>>>>[ Tests ]<<<<<#
 enable_testing()
-add_subdirectory(tests)
+add_subdirectory(src/tests)
 
