@@ -1,67 +1,68 @@
 # QtDesk — Task Manager
 
-A desktop Task Manager application built with **C++17** and **Qt6 Widgets**, featuring **SQLite persistence**, **REST API integration**, and **unit tests**.
+A desktop Task Manager application built with **C++17** and **Qt6 Widgets**, featuring **SQLite persistence**, **REST API integration**, and **unit testing**.
 
 > Built and tested on Linux.
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+---
 
-##  Features
+## 🚀 Features
 
---[ Create tasks with:
-   -[ Title
-   -[ Description
-   -[ Priority
---[ Mark tasks as completed
---[ Filter tasks:
-   -[ All
-   -[ Pending
-   -[ Completed
---[ Search tasks by title
---[ Local persistence using **SQLite**
---[ Fetch a "Quote of the Day" from a public REST API (JSON)
---[ Clean project structure (UI / Core / DB / Net)
---[ Unit tests using **QtTest**
+* Create tasks with:
+
+  * Title
+  * Description
+  * Priority
+* Mark tasks as completed
+* Filter tasks:
+
+  * All
+  * Pending
+  * Completed
+* Search tasks by title
+* Local persistence using **SQLite**
+* Fetch a "Quote of the Day" from a public REST API (JSON)
+* Clean project structure (UI / Core / DB / Net)
+* Unit tests using **QtTest**
 
 ---
 
-##  Tech Stack
+## 🛠️ Tech Stack
 
---[ **C++17**
---[ **Qt 6 (Widgets, Network, SQL)**
---[ **SQLite**
---[ **CMake**
---[ **QtTest**
---[ **Linux**
---[ **Git**
+* **C++17**
+* **Qt 6 (Widgets, Network, SQL)**
+* **SQLite**
+* **CMake**
+* **QtTest**
+* **Linux**
+* **Git**
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+---
 
 ## 📸 Screenshots
 
 > Coming soon.
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+---
 
-##  Project Structure
+## 📂 Project Structure
 
+```
 QtDesk/
 ├── CMakeLists.txt
 ├── README.md
 ├── src/
-│ ├── main.cpp
-│ ├── ui/
-│ ├── core/
-│ ├── db/
-│ └── net/
-└── tests/
+│   ├── main.cpp
+│   ├── ui/
+│   ├── core/
+│   ├── db/
+│   ├── net/
+│   └── tests/
+```
 
+---
 
-
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-##  Build (Linux)
+## ⚙️ Build (Linux)
 
 ### Dependencies (Arch Linux)
 
@@ -74,8 +75,9 @@ sudo pacman -S --needed \
   qtcreator
 ```
 
-Build Steps
+### Build Steps
 
+```bash
 git clone https://github.com/BrunoEstevamRJ/QtDesk.git
 cd QtDesk
 
@@ -83,46 +85,45 @@ cmake -S . -B build
 cmake --build build -j
 
 ./build/QtDesk
+```
 
+---
 
-  Running Tests
+## 🧪 Running Tests
 
+```bash
 cmake -S . -B build
 cmake --build build -j
 ctest --test-dir build --output-on-failure
+```
 
+---
 
-  Roadmap
+## 🗺️ Roadmap
 
-Better UI layout and icons
+* Improve UI layout and icons
+* Task edit feature
+* Export tasks to JSON
+* Import tasks from JSON
+* Dark mode support
+* QML version (future)
 
-Task edit feature
+---
 
-Export tasks to JSON
-
-Import tasks from JSON
-
-Dark mode support
-
-QML version (future)
-
-
-   Why this project?
+## 💡 Why this project?
 
 This project was built to practice and demonstrate:
 
-Modern C++ with clean OOP design
+* Modern C++ with clean OOP design
+* Qt6 Widgets development
+* Database persistence with QtSql
+* REST API integration with QtNetwork
+* Unit testing with QtTest
+* Real-world project structure for junior roles
 
-Qt6 Widgets development
+---
 
-Database persistence with QtSql
+## 📄 License
 
-REST API integration with QtNetwork
+MIT (or your preferred license)
 
-Unit testing with QtTest
-
-A real-world style project structure for junior roles
-
-  License
-
-MIT (or choose your preferred license).
