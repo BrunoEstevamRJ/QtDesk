@@ -15,4 +15,5 @@ public:
     void createTable();
     void addTask(const QString& title);
     std::vector<Task> getTasks();
+    std::vector<Task> searchTasksByTitle(const QString& queryText);
 };
