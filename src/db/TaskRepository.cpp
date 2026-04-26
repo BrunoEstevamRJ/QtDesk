@@ -41,3 +41,22 @@ std::vector<Task> TaskRepository::getTasks()
 
     return tasks;
 }
+
+std::vector<Task> TaskRepository::searchTasksByTitle(const QString& queryText)
+{
+    std::vector<Task> tasks;
+    QSqlQuery query(db);
+
+    query.prepare("SELECT id, title FROM tasks WHERE title LIKE :query ORDER BY id DESC");
+    query.bindValue(":query", "%" + queryText + "%");
+    query.exec();
+
+    while (query.next()) {
+        Task t;
+        t.id = query.value("id").toInt();
+        t.title = query.value("title").toString();
+        tasks.push_back(t);
+    }
+
+    return tasks;
+}

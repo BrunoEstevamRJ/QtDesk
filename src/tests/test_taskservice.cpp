@@ -16,10 +16,14 @@ int main(int argc, char *argv[]) {
     TaskService service;
 
     service.addTask("Estudar Qt");
+    service.addTask("Ler documentação");
 
     auto tasks = service.getTasks();
+    auto searchResult = service.searchTasksByTitle("Qt");
 
-    assert(tasks.size() == 1);
+    assert(tasks.size() == 2);
+    assert(searchResult.size() == 1);
+    assert(searchResult[0].title == "Estudar Qt");
 
     std::cout << "Teste passou!\n";
     std::cout << "POGGERS!\n";

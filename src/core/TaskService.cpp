@@ -1,4 +1,5 @@
 #include "TaskService.h"
+#include <QString>
 
 TaskService::TaskService()
 {
@@ -17,4 +18,9 @@ void TaskService::addTask(const QString& title)
 std::vector<Task> TaskService::getTasks()
 {
     return repo.getTasks();
+}
+
+std::vector<Task> TaskService::searchTasksByTitle(const QString& queryText)
+{
+    return repo.searchTasksByTitle(queryText.trimmed());
 }
